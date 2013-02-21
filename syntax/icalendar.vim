@@ -29,7 +29,8 @@ syn match	icalProperty	"^\(TZID\|TZOFFSETFROM\|TZOFFSETTO\|TZNAME\|TZURL\)"
 syn match	icalProperty	"^\(PRIORITY\|DUE\|COMPLETED\|PERCENT-COMPLETE\|CATEGORIES\)"
 syn match	icalProperty	"^\(RESOURCES\|REPEAT\|REQUEST-STATUS\)"
 syn match	icalCustom	/^X-[A-Z-]\+/
-syn match	icalDate	"[0-9].......T[0-9].....Z\="
+syn match	icalDate	"\<\d\{8}\>"
+syn match	icalDate	"[0-9]\{8}T[0-9]\{6}Z\="
 syn match	icalParameter	"[A-Z0-9-]\+=[^;:]\+"
 syn keyword	icalSetValue	CONFIRMED TENTATIVE CANCELLED DELEGATED OPAQUE
 syn keyword	icalSetValue	NEEDS-ACTION ACCEPTED DECLINED IN-PROGRESS
@@ -50,4 +51,5 @@ delcommand IcalHiLink
 let b:current_syntax = "icalendar"
 
 "EOF vim: tw=78:ft=vim:ts=8
+
 
