@@ -1,3 +1,1 @@
-autocmd! BufRead,BufNewFile *.ics setfiletype icalendar
-
-
+autocmd BufRead,BufNewFile *.ics setfiletype icalendar
